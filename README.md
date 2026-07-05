@@ -5,7 +5,6 @@ Test repository for the "Little Lost Robot" game project.
 ## Project Structure
 
 ### Top Level
-
 ```text
 little-lost-robot-test/
 │
@@ -15,8 +14,10 @@ little-lost-robot-test/
 ├── checkpoints/       # Saved agent models
 ├── docs/              # GDD, research notes
 └── README.md
+```
 
-
+### Frontend
+```text
 frontend/
 │
 ├── src/
@@ -37,7 +38,9 @@ frontend/
 │   └── App.jsx
 │
 └── package.json
-
+```
+### Backend
+```text
 backend/
 │
 ├── main.py                  # FastAPI entry point
@@ -60,7 +63,9 @@ backend/
 │   └── prompts.py           # All prompt templates
 │
 └── requirements.txt
-
+```
+### RL
+```text
 rl/
 │
 ├── environment/
@@ -78,7 +83,9 @@ rl/
 │
 └── configs/
     └── ppo_config.yaml      # Hyperparameters
-
+```
+### Checkpoints
+```text
 checkpoints/
 │
 ├── easy/
@@ -89,3 +96,4 @@ checkpoints/
 │   └── model.zip            # Episode 10,000
 └── expert/
     └── model.zip            # Episode 20,000
+```
