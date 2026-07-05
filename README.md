@@ -1,13 +1,13 @@
-
 # Little-Lost-Robot-TEST
 
-test repo for "Little Lost Robot" game project
+Test repository for the "Little Lost Robot" game project.
 
-Project structure:
+## Project Structure
 
-* Top level:
+### Top Level
 
-**little-lost-robot-test/**
+```text
+little-lost-robot-test/
 │
 ├── frontend/          # React UI
 ├── backend/           # FastAPI server
@@ -16,28 +16,29 @@ Project structure:
 ├── docs/              # GDD, research notes
 └── README.md
 
-**frontend/**
+
+frontend/
 │
 ├── src/
 │   ├── components/
-│   │   ├── RobotGrid.jsx        # 4x4 grid of 16 robots
-│   │   ├── RobotCard.jsx        # individual robot portrait
-│   │   ├── InterrogationPanel.jsx  # dialogue interface
-│   │   ├── SuspicionBoard.jsx   # player's notebook
-│   │   └── GameStatus.jsx       # rounds, accusations left
+│   │   ├── RobotGrid.jsx         # 4x4 grid of 16 robots
+│   │   ├── RobotCard.jsx         # Individual robot portrait
+│   │   ├── InterrogationPanel.jsx # Dialogue interface
+│   │   ├── SuspicionBoard.jsx    # Player's notebook
+│   │   └── GameStatus.jsx        # Rounds, accusations left
 │   │
 │   ├── hooks/
-│   │   ├── useGameState.js      # central game state
-│   │   └── useInterrogation.js  # handles question flow
+│   │   ├── useGameState.js       # Central game state
+│   │   └── useInterrogation.js   # Handles question flow
 │   │
 │   ├── api/
-│   │   └── gameClient.js        # calls to FastAPI backend
+│   │   └── gameClient.js         # Calls to FastAPI backend
 │   │
 │   └── App.jsx
 │
 └── package.json
 
-**backend/**
+backend/
 │
 ├── main.py                  # FastAPI entry point
 │
@@ -45,46 +46,46 @@ Project structure:
 │   ├── state.py             # GameState class
 │   ├── robots.py            # Robot, NormalRobot classes
 │   ├── archetypes.py        # 5 archetype rule tables
-│   ├── suspicion.py         # suspicion score calculator
-│   └── session.py           # manages active game sessions
+│   ├── suspicion.py         # Suspicion score calculator
+│   └── session.py           # Manages active game sessions
 │
 ├── agent/
 │   ├── lost_robot.py        # RL agent wrapper
-│   ├── state_builder.py     # builds state vector from game state
-│   └── action.py            # action enum + descriptions
+│   ├── state_builder.py     # Builds state vector from game state
+│   └── action.py            # Action enum + descriptions
 │
 ├── llm/
-│   ├── classifier.py        # classifies player question → type
-│   ├── dialogue.py          # generates robot responses
-│   └── prompts.py           # all prompt templates
+│   ├── classifier.py        # Classifies player question → type
+│   ├── dialogue.py          # Generates robot responses
+│   └── prompts.py           # All prompt templates
 │
 └── requirements.txt
 
-**rl/**
+rl/
 │
 ├── environment/
-│   ├── env.py               # custom gymnasium.Env class
-│   ├── simulated_player.py  # heuristic player for training
-│   └── reward.py            # reward function
+│   ├── env.py               # Custom gymnasium.Env class
+│   ├── simulated_player.py  # Heuristic player for training
+│   └── reward.py            # Reward function
 │
 ├── training/
 │   ├── train.py             # PPO training loop
-│   ├── evaluate.py          # test agent performance
+│   ├── evaluate.py          # Test agent performance
 │   └── compare.py           # RL vs LLM only comparison
 │
 ├── notebooks/
 │   └── training.ipynb       # Google Colab notebook
 │
 └── configs/
-    └── ppo_config.yaml      # hyperparameters
+    └── ppo_config.yaml      # Hyperparameters
 
-**checkpoints/**
+checkpoints/
 │
 ├── easy/
-│   └── model.zip            # episode 1,000
+│   └── model.zip            # Episode 1,000
 ├── medium/
-│   └── model.zip            # episode 5,000
+│   └── model.zip            # Episode 5,000
 ├── hard/
-│   └── model.zip            # episode 10,000
+│   └── model.zip            # Episode 10,000
 └── expert/
-    └── model.zip            # episode 20,000
+    └── model.zip            # Episode 20,000
