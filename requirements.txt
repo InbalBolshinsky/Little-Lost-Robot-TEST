@@ -1,0 +1,18 @@
+# --- Core Backend & Pydantic Validation ---
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.6.0
+
+# --- Advanced Agentic Operations & Language Processing ---
+openai>=1.14.0
+langchain>=0.1.11
+langgraph>=0.0.26
+
+# --- Reinforcement Learning Core Infrastructure ---
+gymnasium>=0.29.1
+numpy>=1.24.0, <2.0.0
+stable-baselines3[extra]>=2.2.1
+
+# --- Engineering Utility & Configuration Management ---
+pyyaml>=6.0.1
+pydantic-settings>=2.2.1
